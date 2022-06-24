@@ -1,0 +1,62 @@
+<app-loadingspinner [showSpinner]="isLoading"></app-loadingspinner>
+
+<div class="container my-5">
+  <h2>عام</h2>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th scope="col">الحالة</th>
+        <th scope="col">التصرف</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let data of customerData">
+        <td>{{ data.case }}</td>
+        <td>
+          {{ data.action}}
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <h2 class="mt-5">الغاء </h2>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th scope="col">الحالة</th>
+        <th scope="col">التصرف</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let data of cancelData">
+        <td>{{ data.case }}</td>
+        <td>
+          {{ data.action}}
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+  <h2 class="mt-5">استرداد المبلغ/محفظة& حساب بنكي</h2>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th scope="col">الحالة</th>
+        <th scope="col">التصرف</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let data of cancelData">
+        <td>{{ data.case }}</td>
+        <td>
+          {{ data.action}}
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>

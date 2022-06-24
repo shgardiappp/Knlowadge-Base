@@ -1,0 +1,86 @@
+<app-loadingspinner [showSpinner]="isLoading"></app-loadingspinner>
+
+<div class="container my-5">
+  <h2>عام</h2>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">الحالة</th>
+        <th scope="col">الموقف</th>
+        <th scope="col">التصرف</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let data of generalData ; let i = index">
+        <th scope="row">{{ i+1 }}</th>
+        <td>{{ data.case }}</td>
+        <td>
+          <span *ngFor="let situation of data.situation ; let i = index">
+            <p class="table-primary"><span>{{(i+1).toLocaleString('ar-EG')}}-</span> {{situation}}</p><br>
+          </span>
+        </td>
+        <td>
+          <span *ngFor="let actions of data.actions ; let i = index">
+            <span *ngFor="let action of actions ; let i = index">
+              <p><span>{{(i+1).toLocaleString('ar-EG')}}-</span> {{action}}</p>
+            </span>
+          </span>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+  <h2 class="mt-5">الغاء الطلبات</h2>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th scope="col">الحالة</th>
+        <th scope="col">التصرف</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let data of courierData">
+        <td>{{ data.case }}</td>
+        <td>
+          {{ data.action}}
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+  <h2 class="mt-5">التعويضات</h2>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">الحالة</th>
+        <th scope="col">الموقف</th>
+        <th scope="col">التصرف</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let data of compensationData ; let i = index">
+        <th scope="row">{{ i+1 }}</th>
+        <td>{{ data.case }}</td>
+        <td>
+          <span *ngFor="let situation of data.situation ; let i = index">
+            <p class="table-primary"><span>{{(i+1).toLocaleString('ar-EG')}}-</span> {{situation}}</p><br>
+          </span>
+        </td>
+        <td>
+          <span *ngFor="let actions of data.actions ; let i = index">
+            <span *ngFor="let action of actions ; let i = index">
+              <p><span>{{(i+1).toLocaleString('ar-EG')}}-</span> {{action}}</p>
+            </span>
+          </span>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+  
+</div>

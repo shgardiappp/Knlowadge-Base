@@ -1,0 +1,202 @@
+<app-loadingspinner [showSpinner]="isLoading"></app-loadingspinner>
+
+
+<div class="container my-5">
+
+  <h2 class="my-2">عميل</h2>
+
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th scope="col">الحالة</th>
+        <th scope="col"> نوع الطلب</th>
+        <th scope="col">قيمة التعويض</th>
+        <th scope="col">الحدالاعلى</th>
+        <th scope="col">نوع التعويض</th>
+        <th scope="col">Shgardi</th>
+        <th scope="col">Courier</th>
+        <th scope="col">Partner</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1-يوجد منتج ناقص من طلبات العميل ( موجود بالفاتورة لكن المندوب ما جابه)</td>
+        <td>On demand</td>
+        <td>تعويض العميل بقيمة الطلب الناقص</td>
+        <td>300</td>
+        <td>كاش</td>
+        <td>N.A</td>
+        <td>100%</td>
+        <td>N.A</td>
+      </tr>
+      <tr>
+        <td>2-إذا كان الطلب كله مختلف عن طلب العميل والعميل ارسل صور ان الطلب مختلف بالفعل</td>
+        <td>On demand</td>
+
+        <td>تعويض العميل بقيمة الطلب (up to 300 SAR)</td>
+        <td>300</td>
+        <td>كاش</td>
+        <td>Order Price Minus Delivery Fee</td>
+        <td>Delivery Fee</td>
+        <td>N.A</td>
+      </tr>
+      <tr>
+        <td>3-يوجد منتج ناقص من طلبات العميل (غير موجود بالفاتورة)</td>
+        <td>On demand</td>
+        <td>التعويض بكامل قيمة التوصيل</td>
+        <td>50</td>
+        <td>كاش</td>
+        <td>N.A</td>
+        <td>100%</td>
+        <td>N.A</td>
+      </tr>
+
+      <tr>
+        <td>4-الطلب شبه ني أو طعمه سئ أو ما شابه</td>
+        <td>On demand</td>
+        <td>تعويض العميل بكود خصم قيمته 10ريال (صالح للإستخدام 10 مره كحد أقصى)</td>
+        <td>100</td>
+        <td>كود</td>
+        <td>100%</td>
+        <td>N.A</td>
+        <td>N.A</td>
+      </tr>
+      <tr>
+        <td>5-المندوب سرق العميل</td>
+        <td>On demand</td>
+        <td>تعويض العميل بمبلغ لإرضائه يصل إلى 200 ريال</td>
+        <td>200</td>
+        <td>كاش</td>
+        <td>N.A</td>
+        <td>100%</td>
+        <td>N.A</td>
+      </tr>
+      <tr>
+        <td>6-إذا كان الطلب بارد ووقت التوصيل أكثر من 90 دقيقة</td>
+        <td>On demand</td>
+        <td>تعويض العميل بقيمة الطلب</td>
+        <td>200</td>
+        <td>كاش</td>
+        <td>N.A</td>
+        <td>100%</td>
+        <td>N.A</td>
+      </tr>
+      <tr>
+        <td>7-الطلب حالته سيئة او مقلوب و العميل ارسل صورة الطلب</td>
+        <td>Food & On demand</td>
+        <td>تعويض العميل بقيمة الطلب</td>
+        <td>300</td>
+        <td>كاش</td>
+        <td>N.A</td>
+        <td>100%</td>
+        <td>N.A</td>
+      </tr>
+      <tr>
+        <td>8-إذا كان الطلب كله مختلف عن طلب العميل أو (منتج ناقص)</td>
+        <td>Food</td>
+        <td>تعويض العميل بقيمة الطلب أو (قيمة المنتج الناقص)</td>
+        <td>150</td>
+        <td>كاش</td>
+        <td>N.A</td>
+        <td>N.A</td>
+        <td>100%</td>
+      </tr>
+      <tr>
+        <td>9-الطلب حالته سيئة "شبه ني أو طعمه سئ أو ما شابه" والعميل ارسل صورة الطلب (غلطة مطعم)</td>
+        <td>Food</td>
+        <td>تعويض العميل بقيمة الطلب</td>
+        <td>300</td>
+        <td>كاش</td>
+        <td>N.A</td>
+        <td>N.A</td>
+        <td>100%</td>
+      </tr>
+      <tr>
+        <td>10-العميل لم يستلم الإضافات المطلوبه (اذا كانت بفلوس)</td>
+        <td>Food</td>
+        <td>تعويض العميل بقيمة الاضافات</td>
+        <td>30</td>
+        <td>كاش</td>
+        <td>N.A</td>
+        <td>N.A</td>
+        <td>100%</td>
+      </tr>
+      <tr>
+        <td>11-اذا كان الطلب فود والمطعم مغلق</td>
+        <td>Food</td>
+        <td>تعويض العميل بكود خصم قيمته 20 ريال صالح للاستخدام مرة واحدة</td>
+        <td>20</td>
+        <td>Price Promo</td>
+        <td>100%</td>
+        <td>N.A</td>
+        <td>N.A</td>
+      </tr>
+      <tr>
+        <td>12-اذا كان الطلب فود والطلب غير متوفر في المطعم</td>
+        <td>Food</td>
+        <td>تعويض العميل بكود خصم قيمته 20 ريال صالح للاستخدام مرة واحدة</td>
+        <td>20</td>
+        <td>Price Promo</td>
+        <td>100%</td>
+        <td>N.A</td>
+        <td>N.A</td>
+      </tr>
+      <tr>
+        <td>13-إذا كان الطلب بارد ووقت التوصيل أكثر من 70 دقيقة</td>
+        <td>Food</td>
+        <td>تعويض العميل بقيمة الطلب</td>
+        <td>200</td>
+        <td>كاش</td>
+        <td>Order Price Minus Delivery Fee</td>
+        <td>Delivery Fee</td>
+        <td>N.A</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="mt-5">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th scope="col">الحالة</th>
+          <th scope="col">التصرف</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Customers Rejection</td>
+          <td>
+            1- إذا كان الطلب كله مختلف عن طلب العميل و العميل بعت صورة الفاتورة او الاكل و هى هى اللى فى التطبيق
+            <br>2- إذا كان الطلب من مطعم اخر و العميل استلم الطلب بالفعل
+            <br>3- لو العميل دافع و لا يوجد سبب لالغاء الطلب لن يتم رجوع المبلغ للعميل الا فى حالة ان المطعم لم يجهز
+            الطلب
+            او المندوب استلمه (فوود) او المندوب لم يشترى الاغراض (نورمال) يتم رجوع المبلغ للعميل
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<div class="container my-5">
+
+  <h2 class="my-2">مندوب</h2>
+
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th scope="col">الحالة</th>
+        <th scope="col">التصرف</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr *ngFor="let data of delegateData">
+        <td>{{ data.case }}</td>
+        <td>{{ data.action}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
